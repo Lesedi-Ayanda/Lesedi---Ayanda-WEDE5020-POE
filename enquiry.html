@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Enquiry page description]">
+    <title>Sisonke Food Bank - Enquiry</title>
+</head>
+<body>
+
+    <header>
+        <h1>Sisonke Food Bank</h1>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <!--
+                If your organisation is a business/retail store, keep this as a
+                product/service enquiry form.
+
+                If your organisation is an NPO, change the heading/intro and the
+                "Enquiry Type" options below so visitors can enquire about
+                volunteering or becoming a sponsor instead.
+            -->
+            <h2>Make an Enquiry</h2>
+            <p>[Explain what visitors can enquire about here, e.g. product availability,
+               booking a service, volunteering opportunities, or sponsorship.]</p>
+
+            <form action="#" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <br><br>
+
+                <label for="enquiry-type">Enquiry Type:</label>
+                <select id="enquiry-type" name="enquiry-type">
+                    <option value="product">[Enquiry option 1, e.g. Product/Service enquiry]</option>
+                    <option value="volunteer">[Enquiry option 2, e.g. Volunteering]</option>
+                    <option value="sponsor">[Enquiry option 3, e.g. Sponsorship]</option>
+                </select>
+
+                <br><br>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" cols="40" required></textarea>
+
+                <br><br>
+
+                <button type="submit">Submit Enquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sisonke Food Bank. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
