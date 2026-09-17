@@ -128,26 +128,26 @@ A community where every family has reliable access to nutritious food, and where
 ## Changelog
 
 ### Part 1 - Building the Foundation
-- 14 Aug 2026 - Created initial HTML structure for all 5 pages (index, about, services, enquiry, contact).
-- 14 Aug 2026 - Established file and folder structure (css/, js/, images/).
-- 14 Aug 2026 - Added consistent navigation and semantic HTML tags across all pages.
-- 14 Aug 2026 - Wrote and added original content for Sisonke Food Bank (mission, vision, services, team).
-- 14 Aug 2026 - Added `sitemap.html` and `sitemap.xml`.
-- 14 Aug 2026 - Added real images with descriptive alt text to `index.html`.
-- 14 Aug 2026 - Added two Google Maps embeds and full contact details to `contact.html`.
+- **14 Aug 2026** - Created initial HTML structure for all 5 pages (index, about, services, enquiry, contact).
+- **14 Aug 2026** - Established file and folder structure (css/, js/, images/).
+- **14 Aug 2026** - Added consistent navigation and semantic HTML tags across all pages.
+- **14 Aug 2026** - Wrote and added original content for Sisonke Food Bank (mission, vision, services, team).
+- **14 Aug 2026** - Added `sitemap.html` and `sitemap.xml`.
+- **14 Aug 2026** - Added real images with descriptive alt text to `index.html`.
+- **14 Aug 2026** - Added two Google Maps embeds and full contact details to `contact.html`.
 
 ### Part 1 - Feedback Corrections
 
-- 16 Sep 2026 - Added missing siteap
-- 16 Sep 2026 - Fixed and added missing a design aesthetic
+- **16 Sep 2026** - Added missing sitemap
+- **16 Sep 2026** - Fixed and added missing a design aesthetic
 
 ### Part 2 - Designing the Visuals: CSS Styling and Responsive Design
-- 16 Sep 2026 - Created external stylesheet `css/style.css` and linked it to all pages.
-- 16 Sep 2026 - Applied base styles: CSS reset, font family, font size, colour scheme, margin/padding.
-- 16 Sep 2026 - Applied typography styles to headings and body text.
-- 16 Sep 2026 - Built layout structure using Flexbox (header/nav) and CSS Grid (card layouts).
-- 16 Sep 2026 - Applied visual styling: colours, borders, box-shadows on cards, buttons, and forms.
-- 16 Sep 2026 - Added interactive pseudo-classes (`:hover`, `:focus`, `:active`) to links, nav, buttons, and form fields.
-- 16 Sep 2026 - Implemented responsive breakpoints at 768px (tablet) and 480px (mobile).
+- **16 Sep 2026** - Created external stylesheet `css/style.css` and linked it to all pages.
+- **16 Sep 2026** - Applied base styles: CSS reset, font family, font size, colour scheme, margin/padding.
+- **16 Sep 2026** - Applied typography styles to headings and body text.
+- **16 Sep 2026** - Built layout structure using Flexbox (header/nav) and CSS Grid (card layouts).
+- **16 Sep 2026** - Applied visual styling: colours, borders, box-shadows on cards, buttons, and forms.
+- **16 Sep 2026** - Added interactive pseudo-classes (`:hover`, `:focus`, `:active`) to links, nav, buttons, and form fields.
+- **16 Sep 2026** - Implemented responsive breakpoints at 768px (tablet) and 480px (mobile).
 - 16 Sep 2026- Adjusted layout, typography, navigation, and images for tablet and mobile screens.
 - 16 Sep 2026 - Captured and added screenshot evidence for desktop, tablet, and mobile views.
