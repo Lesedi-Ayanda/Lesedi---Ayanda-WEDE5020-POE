@@ -1,0 +1,317 @@
+/* ==========================================================================
+   Sisonke Food Bank - style.css
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. CSS RESET / BASE STYLES
+   -------------------------------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem = 16px by default; using rem throughout keeps text scalable */
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #fff8f0; /* warm cream background */
+}
+
+img {
+    /* Responsive images: never overflow their container, keep proportions */
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+a {
+    color: #2f5233;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: #e85d24;
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   2. TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+h1, h2, h3 {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    font-weight: 700;
+    line-height: 1.25;
+    color: #2f5233; /* deep green for headings */
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #e85d24; /* warm orange for sub-headings */
+}
+
+p {
+    margin-bottom: 1rem;
+    max-width: 70ch; /* comfortable reading line-length */
+}
+
+ul, ol {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. LAYOUT STRUCTURE (Flexbox + Grid)
+   -------------------------------------------------------------------------- */
+header {
+    background-color: #2f5233;
+    color: #ffffff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+header h1 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #e85d24;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+footer {
+    background-color: #2f5233;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #ffe9d9;
+}
+
+/* Hero section on the homepage */
+.hero-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.hero-images img {
+    flex: 1 1 250px;
+}
+
+/* Responsive card grid, used for Services and Contact locations */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   4. VISUAL STYLES: buttons, forms, interactive states
+   -------------------------------------------------------------------------- */
+.cta-button {
+    display: inline-block;
+    background-color: #e85d24;
+    color: #ffffff;
+    padding: 0.6rem 1.25rem;
+    border-radius: 999px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button:hover,
+.cta-button:focus {
+    background-color: #cf4c17;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cta-button:active {
+    transform: scale(0.98);
+}
+
+.site-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: #ffffff;
+    border: 1px solid #eadfce;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.site-form label {
+    font-weight: 600;
+    margin-top: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.site-form input,
+.site-form select,
+.site-form textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.site-form input:focus,
+.site-form select:focus,
+.site-form textarea:focus {
+    outline: none;
+    border-color: #e85d24;
+    box-shadow: 0 0 0 3px rgba(232, 93, 36, 0.2);
+}
+
+.site-form button {
+    margin-top: 1.25rem;
+    align-self: flex-start;
+    background-color: #2f5233;
+    color: #ffffff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.site-form button:hover,
+.site-form button:focus {
+    background-color: #e85d24;
+}
+
+.site-form button:active {
+    transform: scale(0.98);
+}
+
+iframe {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. RESPONSIVE DESIGN: breakpoints and media queries
+   -------------------------------------------------------------------------- */
+
+/* Tablet breakpoint: below 768px, tighten spacing and simplify nav wrapping */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+/* Mobile breakpoint: below 480px, switch nav to a single column and
+   stack the hero images for a single-column reading experience */
+@media (max-width: 480px) {
+    header {
+        padding: 0.75rem 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .hero-images {
+        flex-direction: column;
+    }
+
+    .hero-images img {
+        flex: 1 1 auto;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .site-form {
+        padding: 1rem;
+    }
+}

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[Services page description]">
-    <title>Siisonke Food Bank - Services</title>
+    <meta name="description" content="Explore the programmes Sisonke Food Bank offers: food distribution, elderly support, and emergency assistance.">
+    <title>Sisonke Food Bank - Services</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
         <h1>Sisonke Food Bank</h1>
 
@@ -23,28 +25,35 @@
     </header>
 
     <main>
+        <!-- Services section: each programme is its own article inside a responsive card grid -->
         <section>
             <h2>Our Services</h2>
 
-            <article>
-                <h3>Food distribution</h3>
-                <p>Provide food parcels and nutritious meals to individuals and families experiencing food insecurity.</p>
-            </article>
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Food Distribution</h3>
+                    <p>We provide food parcels and nutritious meals to individuals and families experiencing
+                       food insecurity.</p>
+                </article>
 
-            <article>
-                <h3>Support for elderly and vulnerable people</h3>
-                <p>Deliver food parcels to elderly, disabled, or vulnerable community members who cannot easily access food banks.</p>
-            </article>
+                <article class="card">
+                    <h3>Support for Elderly and Vulnerable People</h3>
+                    <p>We deliver food parcels to elderly, disabled, or vulnerable community members who
+                       cannot easily access food banks.</p>
+                </article>
 
-            <article>
-                <h3>Immediate food assistance</h3>
-                <p>Provide immediate food support to families facing unexpected financial difficulties or emergencies.</p>
-            </article>
+                <article class="card">
+                    <h3>Immediate Food Assistance</h3>
+                    <p>We provide immediate food support to families facing unexpected financial difficulties
+                       or emergencies.</p>
+                </article>
+            </div>
         </section>
     </main>
 
+    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
     <footer>
-        <p>&copy; 2026 Sisonke Food Bank. All rights reserved.</p>
+        <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
     </footer>
 
 </body>
