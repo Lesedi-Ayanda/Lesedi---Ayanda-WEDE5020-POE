@@ -315,3 +315,38 @@ iframe {
         padding: 1rem;
     }
 }
+
+/* Shared page elements and restored photo gallery. */
+.site-title { margin: 0; font-family: 'Poppins', sans-serif; font-size: 1.5rem; font-weight: 700; }
+.site-title a { color: #fff8f0; }
+nav a[aria-current="page"] { background: #fff8f0; color: #2f5233; }
+.skip-link { position: absolute; left: 1rem; top: 0; transform: translateY(-110%); background: #fff8f0; padding: .75rem; z-index: 10; }
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid #b54419; outline-offset: 4px; }
+.hero-images { display: grid; grid-template-columns: 2fr 1fr; }
+.hero-images img { width: 100%; height: clamp(200px, 30vw, 360px); object-fit: cover; }
+.gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+.gallery-item { display: block; width: 100%; padding: 0; border: 0; border-radius: 6px; background: #eadfce; cursor: zoom-in; overflow: hidden; }
+.gallery-item img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .2s; }
+.gallery-item:hover img { transform: scale(1.04); }
+.lightbox { margin: auto; width: min(960px, 94vw); max-height: 94vh; padding: 3rem 1rem 1rem; border: 0; border-radius: 8px; background: #fff8f0; color: #2f5233; }
+.lightbox::backdrop { background: rgb(20 32 23 / 85%); }
+.lightbox-image { max-height: 70vh; width: 100%; object-fit: contain; }
+.lightbox button { background: #2f5233; color: white; border: 0; border-radius: 4px; padding: .4rem 1rem; font-size: 1.5rem; cursor: pointer; }
+.lightbox-close { position: absolute; top: .4rem; right: .5rem; }
+.lightbox-prev, .lightbox-next { margin-top: .5rem; }
+.lightbox-next { float: right; }
+.lightbox figcaption { padding-top: .75rem; }
+.accordion-item { border-bottom: 1px solid #eadfce; }
+.accordion-trigger { width: 100%; text-align: left; padding: 1rem; border: 0; background: #2f5233; color: white; font: inherit; cursor: pointer; }
+.accordion-trigger[aria-expanded="true"] { background: #75412a; }
+.accordion-panel { padding: 1rem; background: white; }
+footer p { margin-left: auto; margin-right: auto; }
+@media (max-width: 600px) {
+    .hero-images, .gallery { grid-template-columns: 1fr; }
+    .hero-images img { height: auto; aspect-ratio: 3 / 2; }
+}
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; }
+}
