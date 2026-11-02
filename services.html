@@ -3,58 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the programmes Sisonke Food Bank offers: food distribution, elderly support, and emergency assistance.">
-    <title>Sisonke Food Bank - Services</title>
+
+    <!-- SEO: unique title (under 60 characters where possible), description and keywords for this page -->
+    <title>Services: Food Parcels, Meals and Emergency Help | Sisonke Food Bank</title>
+    <meta name="description" content="Explore Sisonke Food Bank services: food parcels, a daily soup kitchen, elderly support and emergency food help in Pretoria and Mamelodi. Search and filter.">
+    <meta name="keywords" content="food parcels Pretoria, soup kitchen, emergency food assistance, elderly food support, food drive, volunteer programme">
+    <meta name="author" content="Lesedi Mogadime">
+    <link rel="canonical" href="https://sisonkefoodbank.netlify.app/services.html">
+
+    <!-- Security: only allow scripts, styles, images and connections from the places this site actually uses -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://cdnjs.cloudflare.com; connect-src 'self' https://jsonplaceholder.typicode.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2f5233">
+
+    <!-- Social media previews (Open Graph) so shared links look good on Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sisonke Food Bank">
+    <meta property="og:title" content="Services: Food Parcels, Meals and Emergency Help | Sisonke Food Bank">
+    <meta property="og:description" content="Explore Sisonke Food Bank services: food parcels, a daily soup kitchen, elderly support and emergency food help in Pretoria and Mamelodi. Search and filter.">
+    <meta property="og:url" content="https://sisonkefoodbank.netlify.app/services.html">
+    <meta property="og:image" content="https://sisonkefoodbank.netlify.app/images/donated-food-pile.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Page speed: connect early to the font host and swap fonts in without blocking text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Accessibility: lets keyboard and screen-reader users skip straight to the page content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
-        <h1>Sisonke Food Bank</h1>
+        <p class="site-title"><a href="index.html">Sisonke Food Bank</a></p>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
+                <li><a href="services.html" aria-current="page">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Services section: each programme is its own article inside a responsive card grid -->
+    <main id="main">
         <section>
-            <h2>Our Services</h2>
+            <h1>Our Services</h1>
+            <p>Find the support you need or a way to help. Search by keyword, filter by category or change the order below.</p>
 
-            <div class="card-grid">
-                <article class="card">
-                    <h3>Food Distribution</h3>
-                    <p>We provide food parcels and nutritious meals to individuals and families experiencing
-                       food insecurity.</p>
-                </article>
+            <!-- Search, filter and sort controls (behaviour is in js/services.js) -->
+            <form class="service-tools" role="search" aria-label="Search and filter services">
+                <div class="tool">
+                    <label for="service-search">Search services</label>
+                    <input type="search" id="service-search" name="search" placeholder="e.g. meals, elderly, emergency" autocomplete="off">
+                </div>
+                <div class="tool">
+                    <label for="service-category">Category</label>
+                    <select id="service-category" name="category">
+                        <option value="all">All categories</option>
+                        <option value="Food">Food</option>
+                        <option value="Outreach">Outreach</option>
+                        <option value="Emergency">Emergency</option>
+                        <option value="Community">Community</option>
+                    </select>
+                </div>
+                <div class="tool">
+                    <label for="service-sort">Sort by</label>
+                    <select id="service-sort" name="sort">
+                        <option value="az">Name (A to Z)</option>
+                        <option value="za">Name (Z to A)</option>
+                        <option value="category">Category</option>
+                    </select>
+                </div>
+                <button type="submit" id="service-search-btn" class="secondary-button">Search</button>
+                <button type="button" id="service-reset" class="secondary-button">Reset</button>
+            </form>
 
-                <article class="card">
-                    <h3>Support for Elderly and Vulnerable People</h3>
-                    <p>We deliver food parcels to elderly, disabled, or vulnerable community members who
-                       cannot easily access food banks.</p>
-                </article>
+            <p id="service-count" class="result-count" aria-live="polite"></p>
 
-                <article class="card">
-                    <h3>Immediate Food Assistance</h3>
-                    <p>We provide immediate food support to families facing unexpected financial difficulties
-                       or emergencies.</p>
-                </article>
-            </div>
+            <!-- The cards below are created by JavaScript from a list of services -->
+            <div class="card-grid" id="service-list"></div>
+
+            <!-- Fallback for visitors and search engines without JavaScript -->
+            <noscript>
+                <div class="card-grid">
+                    <article class="card"><h3>Food Distribution</h3><p>We provide food parcels and nutritious meals to individuals and families experiencing food insecurity.</p></article>
+                    <article class="card"><h3>Support for Elderly and Vulnerable People</h3><p>We deliver food parcels to elderly, disabled, or vulnerable community members who cannot easily access food banks.</p></article>
+                    <article class="card"><h3>Immediate Food Assistance</h3><p>We provide immediate food support to families facing unexpected financial difficulties or emergencies.</p></article>
+                </div>
+            </noscript>
         </section>
     </main>
 
-    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
+    <!-- Site footer: copyright, sitemap link and social sharing, repeated identically on every page -->
     <footer>
         <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+        <p class="share-links">Share this page:
+            <a href="#" data-share="facebook" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+            <a href="#" data-share="x" target="_blank" rel="noopener noreferrer">X</a> &middot;
+            <a href="#" data-share="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
     </footer>
 
+    <!-- JavaScript is loaded last with "defer" so it never slows down the page appearing -->
+    <script src="js/main.js" defer></script>
+    <script src="js/services.js" defer></script>
 </body>
 </html>

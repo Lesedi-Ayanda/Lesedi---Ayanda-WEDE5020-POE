@@ -3,96 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Sisonke Food Bank: find our locations, phone, email, and send us a message.">
-    <title>Sisonke Food Bank - Contact</title>
+
+    <!-- SEO: unique title (under 60 characters where possible), description and keywords for this page -->
+    <title>Contact Us - Pretoria and Mamelodi Branches | Sisonke Food Bank</title>
+    <meta name="description" content="Contact Sisonke Food Bank. Find our Pretoria Central and Mamelodi branches on an interactive map, get directions, call us or send a message.">
+    <meta name="keywords" content="contact Sisonke Food Bank, food bank Pretoria address, Mamelodi food bank, food bank near me, Pretoria Central">
+    <meta name="author" content="Lesedi Mogadime">
+    <link rel="canonical" href="https://sisonkefoodbank.netlify.app/contact.html">
+
+    <!-- Security: only allow scripts, styles, images and connections from the places this site actually uses -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://cdnjs.cloudflare.com; connect-src 'self' https://jsonplaceholder.typicode.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2f5233">
+
+    <!-- Social media previews (Open Graph) so shared links look good on Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sisonke Food Bank">
+    <meta property="og:title" content="Contact Us - Pretoria and Mamelodi Branches | Sisonke Food Bank">
+    <meta property="og:description" content="Contact Sisonke Food Bank. Find our Pretoria Central and Mamelodi branches on an interactive map, get directions, call us or send a message.">
+    <meta property="og:url" content="https://sisonkefoodbank.netlify.app/contact.html">
+    <meta property="og:image" content="https://sisonkefoodbank.netlify.app/images/donated-food-pile.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Page speed: connect early to the font host and swap fonts in without blocking text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Leaflet: free, open-source library for interactive maps -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 </head>
 <body>
 
+    <!-- Accessibility: lets keyboard and screen-reader users skip straight to the page content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
-        <h1>Sisonke Food Bank</h1>
+        <p class="site-title"><a href="index.html">Sisonke Food Bank</a></p>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Two branch locations, each with contact details and an embedded map -->
+    <main id="main">
+        <!-- Two branch locations, each with contact details and a directions link -->
         <section>
-            <h2>Contact Us</h2>
+            <h1>Contact Us</h1>
 
             <div class="card-grid">
                 <!-- Location 1 -->
                 <article class="card">
-                    <h3>Pretoria Central</h3>
-                    <p>Phone: 081 734 0215</p>
-                    <p>Email: lesedimogadime9@gmail.com</p>
+                    <h2 class="card-title">Pretoria Central</h2>
+                    <p>Phone: <a href="tel:+27817340215">081&nbsp;734&nbsp;0215</a></p>
+                    <p>Email: <a href="mailto:lesedimogadime9@gmail.com">lesedimogadime9@gmail.com</a></p>
                     <p>Address: 752E+Q9Q, Pretoria Central, Pretoria, 0002</p>
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28748.9667235783!2d28.16563827677996!3d-25.75004944671399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e956213a2f4f16d%3A0x993da7df3774cd26!2sPretoria%20Central%2C%20Pretoria%2C%200002!5e0!3m2!1sen!2sza!4v1786740203960!5m2!1sen!2sza"
-                        width="100%"
-                        height="300"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        title="Map showing Sisonke Food Bank, Pretoria Central">
-                    </iframe>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-25.7461,28.1881" target="_blank" rel="noopener noreferrer">Get directions</a></p>
                 </article>
 
                 <!-- Location 2 -->
                 <article class="card">
-                    <h3>Mamelodi Branch</h3>
-                    <p>Phone: 081 734 0216</p>
-                    <p>Email: mamelodi@sisonkefoodbank.org.za</p>
+                    <h2 class="card-title">Mamelodi Branch</h2>
+                    <p>Phone: <a href="tel:+27817340216">081&nbsp;734&nbsp;0216</a></p>
+                    <p>Email: <a href="mailto:mamelodi@sisonkefoodbank.org.za">mamelodi@sisonkefoodbank.org.za</a></p>
                     <p>Address: Solomon Mahlangu Drive, Mamelodi, Pretoria, 0122</p>
-
-                    <iframe
-                        src="https://www.google.com/maps?q=Mamelodi,+Pretoria,+0122&output=embed"
-                        width="100%"
-                        height="300"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        title="Map showing Sisonke Food Bank, Mamelodi Branch">
-                    </iframe>
+                    <p><a href="https://www.google.com/maps/dir/?api=1&amp;destination=-25.7140,28.3560" target="_blank" rel="noopener noreferrer">Get directions</a></p>
                 </article>
             </div>
         </section>
 
-        <!-- General contact form -->
+        <!-- Interactive map (Leaflet + OpenStreetMap). Buttons and nearest-branch finder are in js/map.js -->
+        <section class="reveal" aria-labelledby="map-heading">
+            <h2 id="map-heading">Find Us on the Map</h2>
+            <div class="map-controls">
+                <button type="button" class="secondary-button" data-map-target="all">Show both branches</button>
+                <button type="button" class="secondary-button" data-map-target="pretoria">Pretoria Central</button>
+                <button type="button" class="secondary-button" data-map-target="mamelodi">Mamelodi</button>
+                <button type="button" class="secondary-button" id="find-nearest">Find my nearest branch</button>
+            </div>
+            <p id="map-status" class="result-count" role="status" aria-live="polite"></p>
+            <div id="map" role="region" aria-label="Interactive map showing the Pretoria Central and Mamelodi branches"></div>
+            <noscript><p>The interactive map needs JavaScript. Please use the &ldquo;Get directions&rdquo; links above.</p></noscript>
+        </section>
+
+        <!-- General contact form: once valid, the details are compiled into an email (see js/contact.js) -->
         <section>
             <h2>Send Us a Message</h2>
+            <p>Complete the form and we will prepare an email to our team for you to review and send. Fields marked * are required.</p>
 
-            <form action="#" method="post" class="site-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="contact-form" action="contact.html" method="post" class="site-form" novalidate>
+                <p class="form-summary" role="alert" hidden></p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-row">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name" aria-describedby="name-error">
+                    <span class="field-error" id="name-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                    <span class="field-error" id="email-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Phone Number (optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. 081 234 5678" pattern="(0|\+27)[1-9][0-9]{8}" autocomplete="tel" aria-describedby="phone-error">
+                    <span class="field-error" id="phone-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="message-type">Type of message *</label>
+                    <select id="message-type" name="message-type" required aria-describedby="message-type-error">
+                        <option value="">Select an option...</option>
+                        <option value="general">General question</option>
+                        <option value="help">I need food assistance</option>
+                        <option value="donation">Donation</option>
+                        <option value="feedback">Feedback or compliment</option>
+                        <option value="media">Media or partnership</option>
+                    </select>
+                    <span class="field-error" id="message-type-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required minlength="10" maxlength="500" aria-describedby="message-error message-count"></textarea>
+                    <span class="char-count" id="message-count"></span>
+                    <span class="field-error" id="message-error" role="alert"></span>
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-
-                <button type="submit">Send Message</button>
+                <button type="submit">Prepare Email</button>
             </form>
+
+            <!-- Email preview: shown after validation. "Open in my email app" fills in a ready-to-send email. -->
+            <div id="email-preview" class="response-box response-success" tabindex="-1" hidden>
+                <h2>Your email is ready</h2>
+                <p>Check the details below, then press &ldquo;Open in my email app&rdquo; to send it.</p>
+                <dl class="email-fields">
+                    <dt>To</dt><dd id="preview-to"></dd>
+                    <dt>Subject</dt><dd id="preview-subject"></dd>
+                </dl>
+                <pre id="preview-body" class="email-body"></pre>
+                <div class="button-row">
+                    <a id="mailto-link" class="cta-button" href="#">Open in my email app</a>
+                    <button type="button" id="copy-email" class="secondary-button">Copy email text</button>
+                    <button type="button" id="edit-message" class="secondary-button">Edit message</button>
+                </div>
+                <p id="copy-note" class="result-count" role="status" aria-live="polite"></p>
+            </div>
         </section>
     </main>
 
-    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
+    <!-- Site footer: copyright, sitemap link and social sharing, repeated identically on every page -->
     <footer>
         <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+        <p class="share-links">Share this page:
+            <a href="#" data-share="facebook" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+            <a href="#" data-share="x" target="_blank" rel="noopener noreferrer">X</a> &middot;
+            <a href="#" data-share="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
     </footer>
 
+    <!-- JavaScript is loaded last with "defer" so it never slows down the page appearing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/map.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/contact.js" defer></script>
 </body>
 </html>

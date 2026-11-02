@@ -3,64 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Enquire about volunteering with Sisonke Food Bank or becoming a sponsor.">
-    <title>Sisonke Food Bank - Enquiry</title>
+
+    <!-- SEO: unique title (under 60 characters where possible), description and keywords for this page -->
+    <title>Volunteer, Sponsor or Donate - Make an Enquiry | Sisonke Food Bank</title>
+    <meta name="description" content="Enquire about volunteering, sponsoring a family or donating food to Sisonke Food Bank. Get an instant answer about availability and cost.">
+    <meta name="keywords" content="volunteer Pretoria, sponsor a family, donate food Pretoria, food bank enquiry, Mamelodi volunteer">
+    <meta name="author" content="Lesedi Mogadime">
+    <link rel="canonical" href="https://sisonkefoodbank.netlify.app/enquiry.html">
+
+    <!-- Security: only allow scripts, styles, images and connections from the places this site actually uses -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://cdnjs.cloudflare.com; connect-src 'self' https://jsonplaceholder.typicode.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2f5233">
+
+    <!-- Social media previews (Open Graph) so shared links look good on Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sisonke Food Bank">
+    <meta property="og:title" content="Volunteer, Sponsor or Donate - Make an Enquiry | Sisonke Food Bank">
+    <meta property="og:description" content="Enquire about volunteering, sponsoring a family or donating food to Sisonke Food Bank. Get an instant answer about availability and cost.">
+    <meta property="og:url" content="https://sisonkefoodbank.netlify.app/enquiry.html">
+    <meta property="og:image" content="https://sisonkefoodbank.netlify.app/images/donated-food-pile.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Page speed: connect early to the font host and swap fonts in without blocking text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Accessibility: lets keyboard and screen-reader users skip straight to the page content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
-        <h1>Sisonke Food Bank</h1>
+        <p class="site-title"><a href="index.html">Sisonke Food Bank</a></p>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
+                <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <!-- Enquiry form: since Sisonke Food Bank is an NPO, visitors can enquire about
-             volunteering or becoming a sponsor, rather than a product/service enquiry -->
+    <main id="main">
+        <!-- Enquiry form: since Sisonke Food Bank is an NPO, visitors can enquire about volunteering,
+             becoming a sponsor or donating. After validation, the page responds with availability or cost. -->
         <section>
-            <h2>Make an Enquiry</h2>
-            <p>Interested in supporting Sisonke Food Bank? Let us know whether you'd like to volunteer
-               your time or become a sponsor, and our team will be in touch with the next steps.</p>
+            <h1>Make an Enquiry</h1>
+            <p>Interested in supporting Sisonke Food Bank? Tell us how you would like to help and you will see
+               straight away what is available and what it costs. All fields marked with * are required.</p>
 
-            <form action="#" method="post" class="site-form">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required>
+            <form id="enquiry-form" action="enquiry.html" method="post" class="site-form" novalidate>
+                <p class="form-summary" role="alert" hidden></p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-row">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="60" autocomplete="name" aria-describedby="name-error">
+                    <span class="field-error" id="name-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error">
+                    <span class="field-error" id="email-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="e.g. 081 234 5678" pattern="(0|\+27)[1-9][0-9]{8}" autocomplete="tel" aria-describedby="phone-error">
+                    <span class="field-error" id="phone-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="enquiry-type">I would like to enquire about *</label>
+                    <select id="enquiry-type" name="enquiry-type" required aria-describedby="enquiry-type-error">
+                        <option value="">Select an option...</option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="sponsor">Becoming a Sponsor</option>
+                        <option value="donate">Donating Food or Goods</option>
+                    </select>
+                    <span class="field-error" id="enquiry-type-error" role="alert"></span>
+                </div>
+                <div class="form-row">
+                    <label for="branch">Preferred branch *</label>
+                    <select id="branch" name="branch" required aria-describedby="branch-error">
+                        <option value="">Select a branch...</option>
+                        <option value="pretoria">Pretoria Central</option>
+                        <option value="mamelodi">Mamelodi Branch</option>
+                    </select>
+                    <span class="field-error" id="branch-error" role="alert"></span>
+                </div>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <!-- These groups appear only for the chosen enquiry type (see js/enquiry.js) -->
+                <div id="group-volunteer" hidden>
+                <div class="form-row">
+                    <label for="start-date">Preferred start date *</label>
+                    <input type="date" id="start-date" name="start-date" aria-describedby="start-date-error">
+                    <span class="field-error" id="start-date-error" role="alert"></span>
+                </div>
+                </div>
+                <div id="group-sponsor" hidden>
+                <div class="form-row">
+                    <label for="families">How many families would you like to sponsor? (1 - 50) *</label>
+                    <input type="number" id="families" name="families" min="1" max="50" step="1" inputmode="numeric" aria-describedby="families-error">
+                    <span class="field-error" id="families-error" role="alert"></span>
+                </div>
+                </div>
+                <div id="group-donate" hidden>
+                <div class="form-row">
+                    <label for="donation-type">What would you like to donate? *</label>
+                    <select id="donation-type" name="donation-type" aria-describedby="donation-type-error">
+                        <option value="">Select...</option>
+                        <option value="food">Non-perishable food</option>
+                        <option value="hygiene">Toiletries and hygiene products</option>
+                        <option value="blankets">Blankets and warm clothing</option>
+                    </select>
+                    <span class="field-error" id="donation-type-error" role="alert"></span>
+                </div>
+                </div>
 
-                <label for="enquiry-type">Enquiry Type:</label>
-                <select id="enquiry-type" name="enquiry-type">
-                    <option value="volunteer">Volunteering</option>
-                    <option value="sponsor">Becoming a Sponsor</option>
-                    <option value="donate">Donating Food or Goods</option>
-                </select>
+                <div class="form-row">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="6" required minlength="10" maxlength="500" aria-describedby="message-error message-count"></textarea>
+                    <span class="char-count" id="message-count"></span>
+                    <span class="field-error" id="message-error" role="alert"></span>
+                </div>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="6" cols="40" required></textarea>
-
-                <button type="submit">Submit Enquiry</button>
+                <button type="submit" id="enquiry-submit">Submit Enquiry</button>
             </form>
+
+            <!-- The personalised answer (availability / cost) appears here after a successful submission -->
+            <div id="enquiry-response" class="response-box" role="status" aria-live="polite" tabindex="-1" hidden></div>
         </section>
     </main>
 
-    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
+    <!-- Site footer: copyright, sitemap link and social sharing, repeated identically on every page -->
     <footer>
         <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+        <p class="share-links">Share this page:
+            <a href="#" data-share="facebook" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+            <a href="#" data-share="x" target="_blank" rel="noopener noreferrer">X</a> &middot;
+            <a href="#" data-share="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
     </footer>
 
+    <!-- JavaScript is loaded last with "defer" so it never slows down the page appearing -->
+    <script src="js/main.js" defer></script>
+    <script src="js/validation.js" defer></script>
+    <script src="js/enquiry.js" defer></script>
 </body>
 </html>

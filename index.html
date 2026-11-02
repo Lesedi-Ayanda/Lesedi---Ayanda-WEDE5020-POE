@@ -3,20 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sisonke Food Bank collects donations and serves meals to fight hunger and support families in need.">
+
+    <!-- SEO: unique title (under 60 characters where possible), description and keywords for this page -->
+    <title>Sisonke Food Bank | Food Bank and Soup Kitchen in Pretoria</title>
+    <meta name="description" content="Sisonke Food Bank collects food donations and serves warm meals to families facing hunger in Pretoria and Mamelodi. Donate, volunteer or sponsor today.">
+    <meta name="keywords" content="food bank Pretoria, soup kitchen Pretoria, food parcels, donate food, volunteer Pretoria, Mamelodi food bank, fighting hunger, non-profit">
     <meta name="author" content="Lesedi Mogadime">
-    <title>Sisonke Food Bank - Home</title>
+    <link rel="canonical" href="https://sisonkefoodbank.netlify.app/index.html">
+
+    <!-- Security: only allow scripts, styles, images and connections from the places this site actually uses -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://cdnjs.cloudflare.com; connect-src 'self' https://jsonplaceholder.typicode.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2f5233">
+
+    <!-- Social media previews (Open Graph) so shared links look good on Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sisonke Food Bank">
+    <meta property="og:title" content="Sisonke Food Bank | Food Bank and Soup Kitchen in Pretoria">
+    <meta property="og:description" content="Sisonke Food Bank collects food donations and serves warm meals to families facing hunger in Pretoria and Mamelodi. Donate, volunteer or sponsor today.">
+    <meta property="og:url" content="https://sisonkefoodbank.netlify.app/index.html">
+    <meta property="og:image" content="https://sisonkefoodbank.netlify.app/images/donated-food-pile.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Page speed: connect early to the font host and swap fonts in without blocking text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Local SEO: structured data that tells search engines about our organisation and both branches -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Sisonke Food Bank",
+  "url": "https://sisonkefoodbank.netlify.app/",
+  "logo": "https://sisonkefoodbank.netlify.app/images/favicon.svg",
+  "description": "Community food bank and soup kitchen fighting hunger in Pretoria and Mamelodi.",
+  "areaServed": "Pretoria, Gauteng, South Africa",
+  "location": [
+    {
+      "@type": "Place",
+      "name": "Sisonke Food Bank - Pretoria Central",
+      "telephone": "+27817340215",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pretoria",
+        "postalCode": "0002",
+        "addressRegion": "Gauteng",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.7461,
+        "longitude": 28.1881
+      }
+    },
+    {
+      "@type": "Place",
+      "name": "Sisonke Food Bank - Mamelodi Branch",
+      "telephone": "+27817340216",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Solomon Mahlangu Drive",
+        "addressLocality": "Mamelodi",
+        "addressRegion": "Gauteng",
+        "postalCode": "0122",
+        "addressCountry": "ZA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -25.714,
+        "longitude": 28.356
+      }
+    }
+  ]
+}
+    </script>
 </head>
 <body>
 
+    <!-- Accessibility: lets keyboard and screen-reader users skip straight to the page content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
-        <h1>Sisonke Food Bank</h1>
+        <p class="site-title"><a href="index.html">Sisonke Food Bank</a></p>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" aria-current="page">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
@@ -25,42 +103,85 @@
         </nav>
     </header>
 
-    <main>
-        <!-- Hero section: introduces the organisation and gives a call to action -->
+    <main id="main">
+        <!-- Hero section: introduces the organisation and gives a call to action.
+             The first image is the most important one, so it loads straight away (fetchpriority). -->
         <section class="hero">
             <div class="hero-images">
-                <img src="images/food-bank.jpg" alt="Volunteers sorting donated food parcels at Sisonke Food Bank" width="300" height="169">
-                <img src="images/food-bank-22.jpg" alt="Boxes of donated food ready for distribution" width="300" height="200">
+                <img src="images/donated-food-pile.jpg" alt="Large pile of donated groceries and tinned food collected by Sisonke Food Bank" width="1200" height="675" fetchpriority="high">
+                <img src="images/volunteers-sorting-food-donations.jpg" alt="Volunteers sorting donated food parcels at Sisonke Food Bank" width="300" height="200">
             </div>
-            <h2>Welcome to Sisonke Food Bank</h2>
-            <p>Sisonke Food Bank is a community-driven non-profit organisation dedicated to fighting hunger.
-               Together, we collect food donations and serve warm meals to individuals and families
-               facing food insecurity, because no one should have to go without.</p>
+            <h1>Welcome to Sisonke Food Bank</h1>
+            <p>Sisonke Food Bank is a community-driven non-profit organisation dedicated to fighting hunger
+               in Pretoria and Mamelodi. Together, we collect food donations and serve warm meals to individuals
+               and families facing food insecurity, because no one should have to go without.</p>
             <p><a href="enquiry.html" class="cta-button">Get involved &mdash; volunteer or become a sponsor</a></p>
         </section>
 
         <!-- Short summary section explaining the purpose of the website itself -->
-        <section>
+        <section class="reveal">
             <h2>About Our Website</h2>
             <p>This website was created to help Sisonke Food Bank reach more people in our community &mdash;
                whether you need support, want to volunteer your time, or are looking to donate or
-               sponsor our work. Here you can learn about who we are, see the services we offer,
-               and get in touch with us directly.</p>
+               sponsor our work. Here you can <a href="about.html">learn about who we are</a>, see the services we offer,
+               and <a href="contact.html">get in touch with us directly</a>.</p>
         </section>
 
         <!-- Brief services teaser, linking through to the full Services page -->
-        <section>
+        <section class="reveal">
             <h2>Our Main Services</h2>
             <p>We provide food parcels and nutritious meals to families in need, deliver support to
                elderly and vulnerable members of our community, and offer immediate food assistance
                to those facing unexpected emergencies. <a href="services.html">Learn more about our services</a>.</p>
         </section>
+
+        <!-- Interactive element: accordion. Clicking a question opens its answer (see js/main.js) -->
+        <section class="reveal" aria-labelledby="faq-heading">
+            <h2 id="faq-heading">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1">Who can receive food from Sisonke Food Bank?</button></h3>
+                    <div class="accordion-panel" id="faq-1" role="region" aria-labelledby="faq-1-btn" hidden>
+                        <p>Anyone facing hunger in Pretoria or Mamelodi is welcome. Visit either branch during opening
+                           hours, or read about our <a href="services.html">Immediate Food Assistance</a> programme for urgent cases.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2">How can I volunteer?</button></h3>
+                    <div class="accordion-panel" id="faq-2" role="region" aria-labelledby="faq-2-btn" hidden>
+                        <p>Fill in our <a href="enquiry.html">enquiry form</a>, choose &ldquo;Volunteering&rdquo; and pick a start date.
+                           We will confirm your shift and provide all equipment and training.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3">How do I donate food or sponsor a family?</button></h3>
+                    <div class="accordion-panel" id="faq-3" role="region" aria-labelledby="faq-3-btn" hidden>
+                        <p>Drop non-perishable food at either branch, or use the <a href="enquiry.html">enquiry form</a> to
+                           sponsor families and receive an instant cost estimate.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h3><button type="button" class="accordion-trigger" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4">Where are you and when are you open?</button></h3>
+                    <div class="accordion-panel" id="faq-4" role="region" aria-labelledby="faq-4-btn" hidden>
+                        <p>We have branches in Pretoria Central and Mamelodi, open Monday to Friday 08:00 &ndash; 16:00 and
+                           Saturday 08:00 &ndash; 14:00. See the <a href="contact.html">interactive map</a> for directions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
+    <!-- Site footer: copyright, sitemap link and social sharing, repeated identically on every page -->
     <footer>
         <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+        <p class="share-links">Share this page:
+            <a href="#" data-share="facebook" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+            <a href="#" data-share="x" target="_blank" rel="noopener noreferrer">X</a> &middot;
+            <a href="#" data-share="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
     </footer>
 
+    <!-- JavaScript is loaded last with "defer" so it never slows down the page appearing -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>

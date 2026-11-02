@@ -1,0 +1,6 @@
+# Netlify security headers (applied automatically when the site is deployed on Netlify)
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(self)

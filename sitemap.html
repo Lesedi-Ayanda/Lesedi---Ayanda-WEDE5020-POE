@@ -3,17 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sitemap for Sisonke Food Bank, listing all pages on this website.">
-    <title>Sisonke Food Bank - Sitemap</title>
+
+    <!-- SEO: unique title (under 60 characters where possible), description and keywords for this page -->
+    <title>Sitemap | Sisonke Food Bank</title>
+    <meta name="description" content="Sitemap for Sisonke Food Bank, listing every page on this website including services, enquiry and contact.">
+    <meta name="keywords" content="Sisonke Food Bank sitemap, site map">
+    <meta name="author" content="Lesedi Mogadime">
+    <link rel="canonical" href="https://sisonkefoodbank.netlify.app/sitemap.html">
+
+    <!-- Security: only allow scripts, styles, images and connections from the places this site actually uses -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://*.basemaps.cartocdn.com https://server.arcgisonline.com https://cdnjs.cloudflare.com; connect-src 'self' https://jsonplaceholder.typicode.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="theme-color" content="#2f5233">
+
+    <!-- Social media previews (Open Graph) so shared links look good on Facebook, WhatsApp, etc. -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Sisonke Food Bank">
+    <meta property="og:title" content="Sitemap | Sisonke Food Bank">
+    <meta property="og:description" content="Sitemap for Sisonke Food Bank, listing every page on this website including services, enquiry and contact.">
+    <meta property="og:url" content="https://sisonkefoodbank.netlify.app/sitemap.html">
+    <meta property="og:image" content="https://sisonkefoodbank.netlify.app/images/donated-food-pile.jpg">
+    <meta property="og:locale" content="en_ZA">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+
+    <!-- Page speed: connect early to the font host and swap fonts in without blocking text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+    <!-- Accessibility: lets keyboard and screen-reader users skip straight to the page content -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <!-- Site header: logo/name and main navigation, repeated identically on every page -->
     <header>
-        <h1>Sisonke Food Bank</h1>
+        <p class="site-title"><a href="index.html">Sisonke Food Bank</a></p>
 
-        <nav>
+        <nav aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -24,26 +54,33 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main">
         <!-- Full list of pages, for visitors and search engines -->
         <section>
-            <h2>Sitemap</h2>
+            <h1>Sitemap</h1>
             <p>Below is a full list of all the pages on this website.</p>
 
             <ul>
-                <li><a href="index.html">Home</a> &ndash; Welcome page and introduction to Sisonke Food Bank.</li>
-                <li><a href="about.html">About</a> &ndash; Our history, mission, vision, and team.</li>
-                <li><a href="services.html">Services</a> &ndash; The programmes we offer, including food parcels and meals.</li>
-                <li><a href="enquiry.html">Enquiry</a> &ndash; Volunteer or sponsorship enquiry form.</li>
-                <li><a href="contact.html">Contact</a> &ndash; Our locations, contact details, and a general contact form.</li>
+                <li><a href="index.html">Home</a> &ndash; Welcome page, frequently asked questions and introduction to Sisonke Food Bank.</li>
+                <li><a href="about.html">About</a> &ndash; Our history, mission, vision, team and photo gallery.</li>
+                <li><a href="services.html">Services</a> &ndash; Searchable list of the programmes we offer, including food parcels and meals.</li>
+                <li><a href="enquiry.html">Enquiry</a> &ndash; Volunteer, sponsor or donate enquiry form.</li>
+                <li><a href="contact.html">Contact</a> &ndash; Our branches on an interactive map, contact details and a message form.</li>
             </ul>
         </section>
     </main>
 
-    <!-- Site footer: copyright and sitemap link, repeated identically on every page -->
+    <!-- Site footer: copyright, sitemap link and social sharing, repeated identically on every page -->
     <footer>
         <p>&copy; 2026 Sisonke Food Bank. All rights reserved. | <a href="sitemap.html">Sitemap</a></p>
+        <p class="share-links">Share this page:
+            <a href="#" data-share="facebook" target="_blank" rel="noopener noreferrer">Facebook</a> &middot;
+            <a href="#" data-share="x" target="_blank" rel="noopener noreferrer">X</a> &middot;
+            <a href="#" data-share="whatsapp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
     </footer>
 
+    <!-- JavaScript is loaded last with "defer" so it never slows down the page appearing -->
+    <script src="js/main.js" defer></script>
 </body>
 </html>
