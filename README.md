@@ -315,3 +315,8 @@ A community where every family has reliable access to nutritious food, and where
 - 20 Oct 2026 - Tested all pages at desktop, tablet and mobile sizes: no JavaScript errors, no horizontal scrolling, all forms, search, lightbox, accordion and map behaviours working.
 - 2 Nov 2026 - Deployed the website to Netlify: https://sisonkefoodbank.netlify.app
 - 2 Nov 2026 - Updated README with Part 3 documentation, changelog and references.
+
+### Restored website visuals
+All pages now load the existing root-level `style.css`. Replacement illustrative photos are stored in `images/`, alongside smaller gallery thumbnails, so the deployed site does not depend on remote photo requests. Photos are illustrative and are not presented as documentation of Sisonke's own events.
+
+Photo sources: [food donation volunteers](https://images.unsplash.com/photo-1593113598332-cd288d649433) (Unsplash image ID `photo-1593113598332-cd288d649433`), [community volunteer](https://images.unsplash.com/photo-1559027615-cd4628902d4a), and [fresh produce](https://images.unsplash.com/photo-1542838132-92c53300491e). Images were downloaded from Unsplash; gallery thumbnails use the same sources.
