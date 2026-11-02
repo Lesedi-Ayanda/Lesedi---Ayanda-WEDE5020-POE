@@ -260,15 +260,10 @@ A community where every family has reliable access to nutritious food, and where
 
 [25] CARTO, "CARTO Basemaps and attributions." [Online]. Available: https://carto.com/attributions. 29 Oct 2026.
 
-**Images (additional)**
-[24] [Photographer name], "[Title of the food parcels photo]," [Source website]. [Online]. Available: [URL]. [Date accessed]. *(Replace with the source of `packed-food-parcels.jpg`.)*
-
-*Note: the images used on the site are resized and compressed copies of the originals cited in [4], [5] and [24].*
-
 ## Changelog
 
 ### Part 1 - Building the Foundation
-- 14 Aug 2026 - Created initial HTML structure for all 5 pages (index, about, services, enquiry, contact).
+- 14 Aug 2026 - Created initial HTML structure for all 5 pages (index, about, services, enquir, contact).
 - 14 Aug 2026 - Established file and folder structure (css/, js/, images/).
 - 14 Aug 2026 - Added consistent navigation and semantic HTML tags across all pages.
 - 14 Aug 2026 - Wrote and added original content for Sisonke Food Bank (mission, vision, services, team).
@@ -293,9 +288,8 @@ A community where every family has reliable access to nutritious food, and where
 - 16 Sep 2026 - Captured and added screenshot evidence for desktop, tablet, and mobile views.
 
 ### Part 3 - Feedback Corrections (from Part 2)
-*(Describe each correction made in response to your Part 2 feedback in detail - what the feedback said, which file(s) you changed and how. Replace these lines with your own entries.)*
-- [Date] - [Feedback point from Part 2 and exactly what was changed.]
-- [Date] - [Feedback point from Part 2 and exactly what was changed.]
+
+- 2 Nov 2026 - Correct formatting
 
 ### Part 3 - Enhancing Functionality and SEO
 - 20 Oct 2026 - Created `js/` files and linked them with `defer` on the pages that need them; `js/main.js` loads on every page.
@@ -319,5 +313,5 @@ A community where every family has reliable access to nutritious food, and where
 - 20 Oct 2026 - Accessibility: added a skip link, `aria-current` on the active nav link, visible focus styles, `aria-live` regions and labelled error messages.
 - 20 Oct 2026 - Extended `css/style.css` (section 6) for the new components, with responsive adjustments at the 768px and 480px breakpoints; made both hero images full-width on mobile.
 - 20 Oct 2026 - Tested all pages at desktop, tablet and mobile sizes: no JavaScript errors, no horizontal scrolling, all forms, search, lightbox, accordion and map behaviours working.
-- 2 Nov 2026 - Deployed the website to Netlify: https://warm-sherbet-f620b9.netlify.app.
+- 2 Nov 2026 - Deployed the website to Netlify: https://sisonkefoodbank.netlify.app
 - 2 Nov 2026 - Updated README with Part 3 documentation, changelog and references.
